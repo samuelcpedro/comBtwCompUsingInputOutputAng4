@@ -1,5 +1,18 @@
 <h1>{{ title }}</h1>
 <h2>Employees Records</h2>
-<app-data [nameAliasForEmployeeName]="employee.eNameValueFromAppComp" [nameAliasForEmployeeCity]="employee.eCityValueFromAppComp" [nameAliasForEmployeeNumber]="employee.eSalaryValueFromAppComp" *ngFor="let employee of employeeRecords">
+<h4>Selected Record</h4>
+<h4>
+    Name:
+    <span style="color:green;font-size: 16px">{{ selectedName }}</span>
+</h4>
+<h4>
+    City:
+    <span style="color:green;font-size: 16px">{{ selectedCity }}</span>
+</h4>
+<h4>
+    Salary:
+    <span style="color:green;font-size: 16px">{{ selectedSalary }} </span>
+</h4>
+<app-data [nameAliasForEmployeeName]="employee.eNameValueFromAppComp" [nameAliasForEmployeeCity]="employee.eCityValueFromAppComp" [nameAliasForEmployeeNumber]="employee.eSalaryValueFromAppComp" (sendRecord)="getRecord()" *ngFor="let employee of employeeRecords">
     The employee records gets displayed here
 </app-data>
