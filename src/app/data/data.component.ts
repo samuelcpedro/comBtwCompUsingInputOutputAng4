@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./data.component.css']
 })
 export class DataComponent {
-  @Input() employeeName: string;
-  @Input() employeeCity: string;
-  @Input() employeeSalary: number;
+  @Input('nameAliasForEmployeeName') employeeNameOfObject: string;
+  @Input('nameAliasForEmployeeCity') employeeCity: string;
+  @Input('nameAliasForEmployeeNumber') employeeSalary: number;
 }

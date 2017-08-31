@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Component Communications';
   employeeRecords: any = [
-    { eName: 'A', eCity: 'City_1', eSalary: 50000 },
-    { eName: 'B', eCity: 'City_2', eSalary: 60000 },
-    { eName: 'C', eCity: 'City_3', eSalary: 70000 },
-    { eName: 'D', eCity: 'City_4', eSalary: 80000 },
+    { eNameValueFromAppComp: 'A', eCityValueFromAppComp: 'City_1', eSalaryValueFromAppComp: 50000 },
+    { eNameValueFromAppComp: 'B', eCityValueFromAppComp: 'City_2', eSalaryValueFromAppComp: 60000 },
+    { eNameValueFromAppComp: 'C', eCityValueFromAppComp: 'City_3', eSalaryValueFromAppComp: 70000 },
+    { eNameValueFromAppComp: 'D', eCityValueFromAppComp: 'City_4', eSalaryValueFromAppComp: 80000 },
   ]
 }

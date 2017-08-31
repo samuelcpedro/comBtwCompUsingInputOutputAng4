@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
 <h2>Employees Records</h2>
-<app-data *ngFor="let employee of employeeRecords">
+<app-data [nameAliasForEmployeeName]="employee.eNameValueFromAppComp" [nameAliasForEmployeeCity]="employee.eCityValueFromAppComp" [nameAliasForEmployeeNumber]="employee.eSalaryValueFromAppComp" *ngFor="let employee of employeeRecords">
     The employee records gets displayed here
 </app-data>
