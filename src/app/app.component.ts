@@ -18,16 +18,20 @@ export class AppComponent {
 		{ eNameValueFromAppComp: 'D', eCityValueFromAppComp: 'City_4', eSalaryValueFromAppComp: 80000 },
 	]
 
-	selectedEmployeeData: any;
-
-	getRecord(): void{
-		console.log('SendRecord Event emitted');
+	selectedEmployeeData: any = {
+		selectedName:'',
+		selectedCity:'',
+		selectedSalary:''
+	};
+	
+	
+	getRecord(data: any): void{
+		this.selectedEmployeeData = data;
 	}
 	
 	/*
-	getRecord(data: any): void{
-		//console.log('SendRecord Event emiited');
-		this.selectedEmployeeData = data;
+	getRecord(): void{
+		console.log('SendRecord Event emitted');
 	}
 	*/
 }

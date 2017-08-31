@@ -9,7 +9,8 @@ export class DataComponent {
 	@Input('nameAliasForEmployeeName') employeeNameOfObject: string;
 	@Input('nameAliasForEmployeeCity') employeeCity: string;
 	@Input('nameAliasForEmployeeNumber') employeeSalary: number;
-	//'emitSendRecordEvent'
+	
+
 	@Output() sendRecord: EventEmitter<any> = new EventEmitter();
 
 	emitSendRecordEvent(){//emitSendRecordEvent
@@ -18,7 +19,7 @@ export class DataComponent {
 			selectedCity: this.employeeCity,
 			selectedSalary: this.employeeSalary,
 		};
-		this.sendRecord.emit();
-		//this.sendRecord.emit(selectedEmployeeObj);
+		//this.sendRecord.emit();
+		this.sendRecord.emit(selectedEmployeeObj);
 	}
 }
